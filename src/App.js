@@ -10,6 +10,7 @@ import Profile from "./components/profile"
 import ChangePassword from "./components/change-password"
 
 
+
 import { AuthContext } from "./helpers/auth-context"
 import { useState, useEffect } from "react"
 import axios from 'axios'
@@ -20,6 +21,8 @@ function App() {
     id: 0,
     status: false,
   });
+
+  
 
   useEffect(() => {
     axios
@@ -44,7 +47,9 @@ function App() {
   const logout = () => {
     localStorage.removeItem("accessToken");
     setAuthState({ username: "", id: 0, status: false });
+    window.location.reload();
   };
+
 
 
   return (
