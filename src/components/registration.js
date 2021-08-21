@@ -21,7 +21,7 @@ function Registration() {
   });
 
   const login = (data) => {
-    axios.post("http://localhost:3001/auth/login", data).then((response) => {
+    axios.post("https://twitterclone-benedictng.herokuapp.com/auth/login", data).then((response) => {
         if (response.data.error) {
             alert(response.data.error)
         } else {
@@ -38,7 +38,7 @@ function Registration() {
   };
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3001/auth", data).then(() => {
+    axios.post("https://twitterclone-benedictng.herokuapp.com/auth", data).then(() => {
       console.log(data);
       login(data);
     });

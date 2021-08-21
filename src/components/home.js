@@ -17,7 +17,7 @@ function Home() {
       history.push("/login");
     } else {
       axios
-        .get("http://localhost:3001/posts", {
+        .get("https://twitterclone-benedictng.herokuapp.com/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((response) => {
@@ -34,7 +34,7 @@ function Home() {
   const likeAPost = (postId) => {
     axios
       .post(
-        "http://localhost:3001/likes",
+        "https://twitterclone-benedictng.herokuapp.com/likes",
         { PostId: postId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )

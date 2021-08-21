@@ -23,7 +23,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("twitterclone-benedictng.herokuapp.com/auth/auth", {
+      .get("https://twitterclone-benedictng.herokuapp.com/auth/auth", {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },
