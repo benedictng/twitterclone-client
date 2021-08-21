@@ -13,7 +13,6 @@ function Login() {
     const data = { username: username, password: password };
     axios.post("https://twitterclone-benedictng.herokuapp.com/auth/login", data).then((response) => {
         if (response.data.error) {
-            alert(response.data.error)
         } else {
             localStorage.setItem("accessToken", response.data.token);
             setAuthState({
