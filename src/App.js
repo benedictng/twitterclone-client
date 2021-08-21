@@ -46,9 +46,6 @@ function App() {
     setAuthState({ username: "", id: 0, status: false });
   };
 
-  const profilePage = () => {
-    history.pushState()
-  }
 
   return (
     <div className="App">
